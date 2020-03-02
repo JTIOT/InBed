@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.cxfapp.bnc.org/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="BusinessProcessWsService" targetNamespace="http://ws.cxfapp.bnc.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://ws.cxfapp.bnc.org/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="GetSleepData" type="tns:GetSleepData" />
+      <xs:element name="GetSleepDataResponse" type="tns:GetSleepDataResponse" />
+      <xs:element name="SendRequest" type="tns:SendRequest" />
+      <xs:element name="SendRequestResponse" type="tns:SendRequestResponse" />
+      <xs:complexType name="SendRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SendRequestResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetSleepData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetSleepDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="SendRequest">
+    <wsdl:part name="parameters" element="tns:SendRequest" />
+  </wsdl:message>
+  <wsdl:message name="SendRequestResponse">
+    <wsdl:part name="parameters" element="tns:SendRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSleepData">
+    <wsdl:part name="parameters" element="tns:GetSleepData" />
+  </wsdl:message>
+  <wsdl:message name="GetSleepDataResponse">
+    <wsdl:part name="parameters" element="tns:GetSleepDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BusinessProcess">
+    <wsdl:operation name="SendRequest">
+      <wsdl:input name="SendRequest" message="tns:SendRequest" />
+      <wsdl:output name="SendRequestResponse" message="tns:SendRequestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSleepData">
+      <wsdl:input name="GetSleepData" message="tns:GetSleepData" />
+      <wsdl:output name="GetSleepDataResponse" message="tns:GetSleepDataResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BusinessProcessWsServiceSoapBinding" type="tns:BusinessProcess">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="SendRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SendRequestResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSleepData">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="GetSleepData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetSleepDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BusinessProcessWsService">
+    <wsdl:port name="BusinessProcessImplPort" binding="tns:BusinessProcessWsServiceSoapBinding">
+      <soap:address location="http://211.167.103.197:8080/AppWebService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

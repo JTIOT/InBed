@@ -1,0 +1,361 @@
+﻿@model InBed.Service.Dto.ElderDto
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Adm/Views/Shared/_Layout_Body.cshtml";
+}
+@section StylesBefore{
+
+<link href="~/assets/css/registration-form.css" rel="stylesheet" type="text/css" />
+
+
+<link href="~/assets/plugins/jquery-ui/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="~/assets/plugins/datepicker/css/datepicker.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="~/assets/plugins/daterangepicker/css/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="~/assets/plugins/timepicker/css/timepicker.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="~/assets/plugins/datetimepicker/css/datetimepicker.min.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="~/assets/plugins/colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="~/assets/plugins/ios-switch/css/switch.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="~/assets/plugins/tagsinput/css/bootstrap-tagsinput.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="~/assets/plugins/select2/select2.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="~/assets/plugins/typeahead/css/typeahead.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="~/assets/plugins/multi-select/css/multi-select.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+}
+@section Scripts{
+     <!-- CORE JS FRAMEWORK - START -->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=TuNY8zbjIexxzrhwfXmwDCBAmDuCUdxX"></script>
+<script src="~/Template/Admin/InBed/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="~/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="~/assets/js/jquery.easing.min.js" type="text/javascript"></script>
+<script src="~/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="~/assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<script src="~/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js" type="text/javascript"></script>
+<script src="~/assets/plugins/viewport/viewportchecker.js" type="text/javascript"></script>
+<!-- CORE JS FRAMEWORK - END -->
+<!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+<script src="~/assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="~/assets/plugins/jquery-validation/js/additional-methods.min.js" type="text/javascript"></script>
+<script src="~/assets/js/form-validation.js" type="text/javascript"></script>
+
+<script src="~/assets/plugins/jquery-ui/smoothness/jquery-ui.min.js" type="text/javascript"></script>
+<script src="~/assets/plugins/datepicker/js/datepicker.js" type="text/javascript"></script>
+<script src="~/assets/plugins/daterangepicker/js/moment.min.js" type="text/javascript"></script>
+<script src="~/assets/plugins/daterangepicker/js/daterangepicker.js" type="text/javascript"></script>
+<script src="~/assets/plugins/timepicker/js/timepicker.min.js" type="text/javascript"></script>
+<script src="~/assets/plugins/datetimepicker/js/datetimepicker.min.js" type="text/javascript"></script>
+<script src="~/assets/plugins/datetimepicker/js/locales/bootstrap-datetimepicker.fr.js" type="text/javascript"></script>
+<script src="~/assets/plugins/colorpicker/js/bootstrap-colorpicker.min.js" type="text/javascript"></script>
+<script src="~/assets/plugins/tagsinput/js/bootstrap-tagsinput.min.js" type="text/javascript"></script>
+<script src="~/assets/plugins/select2/select2.min.js" type="text/javascript"></script>
+<script src="~/assets/plugins/typeahead/typeahead.bundle.js" type="text/javascript"></script>
+<script src="~/assets/plugins/typeahead/handlebars.min.js" type="text/javascript"></script>
+<script src="~/assets/plugins/multi-select/js/jquery.multi-select.js" type="text/javascript"></script>
+<script src="~/assets/plugins/multi-select/js/jquery.quicksearch.js" type="text/javascript"></script>
+<!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+<!-- CORE TEMPLATE JS - START -->
+<script src="~/assets/js/scripts.js" type="text/javascript"></script>
+<script src="~/assets/js/registration-form.js" type="text/javascript"></script>
+<!-- END CORE TEMPLATE JS - END -->
+
+     }
+<section class="box ">
+    <header class="panel_header">
+         <h2 class="title pull-left" style="color:#fff">老人訊息登記表</h2>
+    </header>
+    <div class="content-body">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="registration">
+                    <form id="icon_validate" action="#">
+                        <div class="btn-box">
+                            <button type="submit" class="btn btn-success btn-form">提交</button>
+                            <button type="button" class="btn btn-default">取消</button>
+                        </div>
+                        <table class="registration-form">
+                            
+                            <tr>
+                                <th colspan="2">姓名</th>
+                                <td id="icon_validate" action="#">
+                                    <div class="form-group">
+                                        <div class="controls">
+                                            <i class=""></i>
+                                            <input type="text" class="form-control oldman-name" name="formfield1">
+                                        </div>
+                                    </div>
+                                </td>
+
+
+                                <th>性别</th>
+                                <td>
+                                    <input type="radio" name="sex" value="1" checked="checked">男
+                                    <input type="radio" name="sex" value="2">女
+                                </td>
+                                <th>出生日期</th>
+                                <td id="icon_validate" action="#">
+                                    <div class="form-group">
+                                        <div class="controls icon-ctrl">
+                                            <i class=""></i>
+                                            <input type="text" class="form-control datepicker birthday" data-format="yyyy/MM/dd" id="formfield2" name="formfield2">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">身份證號</th>
+                                <td id="icon_validate" action="#">
+                                    <div class="form-group">
+                                        <div class="controls">
+                                            <i class=""></i>
+                                            <input type="text" class="form-control identity-card" name="formfield3" id="formfield3" maxlength="18">
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>家庭住址</th>
+                                <td colspan="3" id="icon_validate" action="#">
+                                    <div class="form-group">
+                                        <div class="controls">
+                                            <i class=""></i>
+                                            <input type="text" class="form-control homeaddress" id="formfield7" name="formfield7">
+                                            <input type="text" class="form-control" id="mapPoint" style="display:none">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">家庭電話</th>
+                                <td id="icon_validate" action="#">
+                                    <div class="form-group">
+                                        <div class="controls">
+                                            <i class=""></i>
+                                            <input type="text" class="form-control home-phone" id="formfield4" name="formfield4" maxlength="18">
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>聯繫人姓名</th>
+                                <td id="icon_validate" action="#">
+                                    <div class="form-group">
+                                        <div class="controls">
+                                            <i class=""></i>
+                                            <input type="text" class="form-control contact-name" id="formfield5" name="formfield5" maxlength="18">
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>聯繫人電話</th>
+                                <td id="icon_validate" action="#">
+                                    <div class="form-group">
+                                        <div class="controls">
+                                            <i class=""></i>
+                                            <input type="text" class="form-control contact-phone" id="formfield6" name="formfield6" maxlength="18">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">常住類型</th>
+                                <td colspan="2">
+                                    <input type="radio" name="household" value="1">戶籍
+                                    <input type="radio" name="household" value="2">非戶籍
+                                </td>
+                                <th>民族</th>
+                                <td colspan="2">
+                                    <input type="radio" name="nation" value="1">漢族
+                                    <input type="radio" name="nation" value="2">少數民族
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">血型</th>
+                                <td colspan="5">
+                                    <input type="radio" name="blood-type" value="1">A型
+                                    <input type="radio" name="blood-type" value="2">B型
+                                    <input type="radio" name="blood-type" value="3">O型
+                                    <input type="radio" name="blood-type" value="4">AB型/RH陰性
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">教育程度</th>
+                                <td colspan="5">
+                                    <input type="radio" name="education" value="1">文盲及半文盲
+                                    <input type="radio" name="education" value="2">國小
+                                    <input type="radio" name="education" value="3">國中
+                                    <input type="radio" name="education" value="4">高中
+                                    <input type="radio" name="education" value="5">高職
+                                    <input type="radio" name="education" value="6">大學
+                                    <input type="radio" name="education" value="7">不詳
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">職業</th>
+                                <td colspan="5">
+                                    <input type="radio" name="professional" value="1">工人
+                                    <input type="radio" name="professional" value="2">離退休者
+                                    <input type="radio" name="professional" value="3">專業技術人員
+                                    <input type="radio" name="professional" value="4">行政人員
+                                    <input type="radio" name="professional" value="5">辦事人員
+                                    <input type="radio" name="professional" value="6">軍人
+                                    <input type="radio" name="professional" value="7">企業家
+                                    <input type="radio" name="professional" value="8">商業服務人員
+                                    <input type="radio" name="professional" value="9">其他
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">婚姻狀況</th>
+                                <td colspan="5">
+                                    <input type="radio" name="marriage" value="1">已婚
+                                    <input type="radio" name="marriage" value="2">未婚
+                                    <input type="radio" name="marriage" value="3">離異
+                                     <input type="radio" name="marriage" value="4">喪偶
+                                    <input type="radio" name="marriage" value="5">分居
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">醫療費用隻付方式</th>
+                                <td colspan="5">
+                                    <input type="radio" name="medical-payment" value="1">全民健保
+                                    <input type="radio" name="medical-payment" value="2">半全民健保
+                                    <input type="radio" name="medical-payment" value="3">自費
+                                    <input type="radio" name="medical-payment" value="4">其他
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">藥物過敏史</th>
+                                <td colspan="5">
+                                    <input type="radio" name="allergy" class="radio" value="1">無
+                                    <input type="checkbox" name="allergy" value="2">青黴素
+                                    <input type="checkbox" name="allergy" value="3">碘胺
+                                    <input type="checkbox" name="allergy" value="4">鏈黴素
+                                    <input type="checkbox" name="allergy" value="5">其他
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">暴露史</th>
+                                <td colspan="5">
+                                    <input type="radio" name="expose" class="radio" value="1">無
+                                    <input type="checkbox" name="expose" value="2">化學品
+                                    <input type="checkbox" name="expose" value="3">毒物
+                                    <input type="checkbox" name="expose" value="4">射線
+                                </td>
+                            </tr>
+                            <tr>
+                                <th rowspan="6">既往史</th>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">歷史病例</th>
+                                <td colspan="5">
+                                    <input type="checkbox" name="disease" value="1">高血壓
+                                    <input type="checkbox" name="disease" value="2">糖尿病
+                                    <input type="checkbox" name="disease" value="3">冠心病
+                                    <input type="checkbox" name="disease" value="4">惡性腫瘤
+                                    <input type="checkbox" name="disease" value="5">腦卒中
+                                    <input type="checkbox" name="disease" value="6">COPD
+                                    <input type="checkbox" name="disease" value="7">結核病
+                                    <input type="checkbox" name="disease" value="8">精神分裂症
+                                    <input type="checkbox" name="disease" value="9">肝炎
+                                    <input type="checkbox" name="disease" value="10">其他
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">
+                                    <span>確診時間</span>
+                                    <input type="text" class="form-control datepicker disease-time" data-format="D, dd MM yyyy">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>手術</th>
+                                <td colspan="5">
+                                    <input type="radio" name="operation" class="radio" value="1">無
+                                    <input type="radio" name="operation" value="2">有：
+                                    <span>名稱</span>
+                                    <input type="text" name="" class="form-control operation-name">
+                                    <span>時間</span>
+                                    <input type="text" class="form-control datepicker operation-time" data-format="D, dd MM yyyy">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>外傷</th>
+                                <td colspan="5">
+                                    <input type="radio" name="injury" class="radio" value="1">無
+                                    <input type="radio" name="injury" value="2">有：
+                                    <span>名稱</span>
+                                    <input type="text" name="" class="form-control injury-name">
+                                    <span>時間</span>
+                                    <input type="text" class="form-control datepicker injury-time" data-format="D, dd MM yyyy">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>輸血</th>
+                                <td colspan="5">
+                                    <input type="radio" name="bloodtrans" class="radio" value="1">無
+                                    <input type="radio" name="bloodtrans" value="2">有：
+                                    <span>名稱</span>
+                                    <input type="text" name="" class="form-control bloodtrans-name">
+                                    <span>時間</span>
+                                    <input type="text" class="form-control datepicker bloodtrans-time" data-format="D, dd MM yyyy">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th rowspan="3" colspan="2">家族史</th>
+                                <th>父親</th>
+                                <td colspan="2">
+                                    <input type="text" name="" class="form-control _father">
+                                </td>
+                                <th>母親</th>
+                                <td colspan="2">
+                                    <input type="text" name="" class="form-control _mother">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>兄弟姐妹</th>
+                                <td colspan="2">
+                                    <input type="text" name="" class="form-control _brother">
+                                </td>
+                                <th>子女</th>
+                                <td colspan="2">
+                                    <input type="text" name="" class="form-control _children">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">
+                                    <input type="checkbox" name="family-disease">高血壓
+                                    <input type="checkbox" name="family-disease">糖尿病
+                                    <input type="checkbox" name="family-disease">冠心病
+                                    <input type="checkbox" name="family-disease">惡性腫瘤
+                                    <input type="checkbox" name="family-disease">過敏史
+                                    <input type="checkbox" name="family-disease">精神分裂症
+                                    <input type="checkbox" name="family-disease">結核病
+                                    <input type="checkbox" name="family-disease">肝炎
+                                    <input type="checkbox" name="family-disease">腦卒中
+                                    <input type="checkbox" name="family-disease">先天畸形
+                                    <input type="checkbox" name="family-disease">其他
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">遺傳病史</th>
+                                <td colspan="5">
+                                    <input type="radio" name="inherited-disease" class="radio" value="1">無
+                                    <input type="radio" name="inherited-disease" value="2">有：疾病名稱
+                                    <input type="text" name="" class="form-control inherited-disease_name">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2" rowspan="2">有無殘疾</th>
+                                <td colspan="5">
+                                    <input type="radio" name="disability" class="radio" value="1">無殘疾
+                                    <input type="checkbox" name="disability" value="2">聽力殘
+                                    <input type="checkbox" name="disability" value="3">言語殘
+                                    <input type="checkbox" name="disability" value="4">肢體殘
+                                    <input type="checkbox" name="disability" value="5">智力殘
+                                    <input type="checkbox" name="disability" value="6">眼殘
+                                    <input type="checkbox" name="disability" value="7">精神殘
+                                    <span>殘疾證號</span>
+                                    <input type="text" name="" maxlength="18" class="form-control disability-identity">
+                                </td>
+                            </tr>
+
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

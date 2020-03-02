@@ -1,0 +1,237 @@
+﻿@model FacilitatorDto
+@using System.Text
+@using InBed.Service.Dto
+@using InBed.Service.Enum
+@{
+    Layout = "/Areas/Adm/Views/Shared/_Layout_Body.cshtml";
+    List<FacilitatorDto> facilitator = ViewBag.Facilitator;
+}
+@section StylesBefore{
+    <link href="~/assets/CSS/users.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="~/assets/plugins/daterangepicker/css/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="~/assets/plugins/datatables/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/plugins/datatables/css/dataTables.tableTools.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/plugins/datatables/css/dataTables.colVis.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/plugins/datatables/css/dataTables.responsive.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/plugins/datatables/css/dataTables.scroller.css" rel="stylesheet" type="text/css" />
+
+}
+@section Scripts{
+    <script src="~/Template/Admin/InBed/js/data-table/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="~/Template/Admin/InBed/js/data-table/js/dataTables.tableTools.min.js" type="text/javascript"></script>
+    <script src="~/Template/Admin/InBed/js/data-table/js/bootstrap-dataTable.js" type="text/javascript"></script>
+    <script src="~/Template/Admin/InBed/js/data-table/js/dataTables.colVis.min.js" type="text/javascript"></script>
+    <script src="~/Template/Admin/InBed/js/data-table/js/dataTables.responsive.min.js" type="text/javascript"></script>
+    <script src="~/Template/Admin/InBed/js/data-table/js/dataTables.scroller.min.js" type="text/javascript"></script>
+    <script src="~/Template/Admin/InBed/js/InBed.tables.js" type="text/javascript"></script>
+    <script>
+        var grid = null;
+        var mygrid = null;
+        var t1 = 1;
+        var t2 = 1;
+        function clickOption(it) {
+            t1 = t1 ? 0 : 1;
+            if (t1) {
+                mygrid.reload();
+                //grid.reload();
+            }
+        }
+        function clickOption1(it) {
+            t2 = t2 ? 0 : 1;
+            if (t2) {
+                grid.reload();
+                //grid.reload();
+            }
+        }
+        function reload() {
+            grid.reload();
+        }
+
+        function authenRole(action) {
+            var url = '@Url.Action("AleftMetastasis", ViewContext.RouteData.Values)';
+            var rows = grid.getSelectedRows();
+            if (rows.length > 0) {
+                for (var i = 0; i < rows.length; i++) {
+                    rows[i].FacilitatorCode = ParentId2.value;
+                    rows[i].FacilitatorName = ParentId.value;
+                }
+            }
+            if (action == "unauthen") {
+                url = '@Url.Action("RightMetastasis", ViewContext.RouteData.Values)';
+                rows = mygrid.getSelectedRows();
+                if (rows.length > 0) {
+                    for (var i = 0; i < rows.length; i++) {
+                        rows[i].FacilitatorCode = ParentId.value;
+                        rows[i].FacilitatorName = ParentId2.value;
+                    }
+                }
+            }
+           // var actionName = action == "unauthen" ? "取消" : "授权";
+            if (rows != null && rows.length > 0) {
+                $.ajax({
+                    url: url,
+                    type: 'post',
+                    data: JSON.stringify(rows),
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    success: function(res) {
+                        if (res.flag) {
+                           // parent.layer.alert(actionName + "成功");
+                            grid.reload();
+                            mygrid.reload();
+                        } else {
+                           // parent.layer.alert(actionName + "失败:" + res.msg);
+                        }
+                    }
+                });
+            } else {
+                parent.layer.alert("請選擇要轉移的老人");
+            }
+        }
+
+        $(function() {
+            var cols = [
+                { data: "Id", name: "Id", orderable: false },
+                { data: "Name", name: "Name", orderable: true },
+                { data: "number", name: "number", orderable: true },
+                { data: "homephone", name: "homephone", orderable: true }
+            ];
+            var config = {
+                id: "table_server",
+                url: "@Url.Action("GetRightElder", @ViewContext.RouteData.Values)",
+                columns: cols,
+                order: [[1, "desc"]]
+            };
+            grid = new InBed.grid(config);
+            grid.load();
+
+            $(".box-refresh").click(function() {
+                grid.reload();
+            });
+        
+            var myconfig = {
+                id: "table_server_my",
+                url: "@Url.Action("GetAleftElder", @ViewContext.RouteData.Values)",
+                columns: cols,
+                order: [[1, "desc"]],
+                canFilter: false
+            };
+            mygrid = new InBed.grid(myconfig);
+            mygrid.load();
+            
+        });
+    </script>
+}
+<div class="row">
+    <div class="col-md-5">
+        <section class="panel">
+            <header class="panel-heading" style="margin-bottom: 10px;">
+                <form class="form-inline" role="form" id="fromSearch">
+                    <label class="query-label">服務商：</label>
+                    <select class="form-control select2" onclick="clickOption(this)" style="width:150px;display:inline-block" id="ParentId" name="ParentId">
+                        <option value=""></option>
+                        @if (facilitator != null && facilitator.Any())
+                        {
+                            StringBuilder sb = new StringBuilder();
+
+                            sb.AppendFormat("<option value=\"{0}\">{1}</option>", 0, "------請選擇--------");
+                            sb.Append("</optgroup>");
+
+                            foreach (var m in facilitator)
+                            {
+
+                                sb.AppendFormat("<option value=\"{0}\">{1}</option>", m.Code, m.Name);
+
+                            }
+                            @(new MvcHtmlString(sb.ToString()))
+                        }
+                    </select>
+                </form>
+
+</header>
+            <table id="table_server_my" class="table responsive-data-table data-table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 40px;">
+                            選擇
+                        </th>
+                        <th>
+                            老人姓名
+                        </th>
+                        <th>
+                            設備編號
+                        </th>                     
+                        <th>
+                            聯繫電話
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </section>
+    </div>
+    <div class="col-md-2 text-center">
+        <p>
+            <button class="btn btn-primary" onclick="authenRole('authen')">&lt;&lt;</button>
+        </p>
+        <p>
+            <button class="btn btn-success" onclick="authenRole('unauthen')">&gt;&gt;</button>
+        </p>
+    </div>
+    <div class="col-md-5">
+        <div class="hidden" id="hidden_filter">
+            @* 把需要搜索的条件放到hidden里面，在table格式化完成的时候直接调用$.html()赋值，免去了在js拼接标签的麻烦 *@
+            <div class="row" style="margin-right:0;">
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <label class="sr-only" for="keywords">關鍵字</label>
+                        <input type="text" class="form-control" id="keywords" name="keywords" placeholder="角色名稱" maxlength="20" />
+                    </div>
+                    <button type="button" class="btn btn-success" name="go_search">搜索</button>
+                </form>
+            </div>
+        </div>
+        <section class="panel">
+            <header class="panel-heading" style="margin-bottom: 10px;">
+                <form class="form-inline" role="form" id="fromSearch1">
+                    <label class="query-label">服务商：</label>
+                    <select class="form-control select2" onclick="clickOption1(this)" style="width:150px;display:inline-block" id="ParentId2" name="ParentId2">
+                        <option value=""></option>
+                        @if (facilitator != null && facilitator.Any())
+                        {
+                            StringBuilder sb = new StringBuilder();
+
+                            sb.AppendFormat("<option value=\"{0}\">{1}</option>", 0, "------请选择--------");
+                            sb.Append("</optgroup>");
+
+                            foreach (var m in facilitator)
+                            {
+
+                                sb.AppendFormat("<option value=\"{0}\">{1}</option>", m.Code, m.Name);
+
+                            }
+                            @(new MvcHtmlString(sb.ToString()))
+                        }
+                    </select>
+                </form>
+            </header>
+            <table id="table_server" class="table responsive-data-table data-table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 40px;">
+                            选择
+                        </th>
+                        <th>
+                            老人姓名
+                        </th>
+                        <th>
+                            设备编号
+                        </th>
+                        <th>
+                            联系电话
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </section>
+    </div>
+</div>

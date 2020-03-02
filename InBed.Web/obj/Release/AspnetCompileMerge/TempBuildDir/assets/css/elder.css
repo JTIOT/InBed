@@ -1,0 +1,167 @@
+
+/*.content-body{
+    margin-bottom:80px;
+
+}*/
+.elder-container{
+    padding:20px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap:wrap;
+    
+}
+.elder-box{
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+.elder-list{
+    overflow: hidden;
+    padding: 10px 5px 0 5px;
+    width: 335px;
+    margin: 10px 6px;
+    -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9); 
+}
+
+.bg1{
+    background-color: #5893CE;
+}
+/*红灯*/
+.bg2{
+    background-color: #CB5A63;
+}
+
+.isOn1{
+    background-color: green;
+}
+.isOn0{
+    background-color: gray;
+}
+
+.elder-info{
+    overflow: hidden;
+    height: 80px;
+    padding: 8px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    position:relative;
+}
+
+.skip{
+    position:absolute;
+    top:8px;
+    left:8px;
+    width:45px;
+    height: 45px;
+    background-color:transparent;
+    outline:none;
+    border:none;
+}
+
+.elder-info-img{
+    float: left;
+}
+.elder-info-img img{
+    width:45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.elder-info-txt{
+    float: left;
+    color: #fff;
+    text-align: left;
+
+}
+.elder-info-txt ul{
+    float: left;
+    overflow: hidden;
+    padding-left: 6px;
+    margin-bottom: 0;
+    list-style: none;
+}
+.elder-info-txt .age-tele{
+    padding-left: 20px;
+}
+
+.system-state{
+    overflow: hidden;
+}
+
+.xindiantu{
+    float: left;
+    position:relative;
+}
+.xindiantu img{
+    width: 210px;
+}
+.heartNum{
+    position:absolute;
+    color:#f00;
+    font-size:35px;
+    top:10px;
+    right:5px;
+}
+
+
+.state-light{
+    float: left;
+    margin-top: 10px;
+    margin-left:5px; 
+    padding: 2px;
+}
+.state-light p{
+    font-size: 12px;
+    color: #fff;
+}
+.equipment-online{
+    float: left;
+    margin-right: 8px;
+}
+.equipment-online div{
+    width: 40px;    
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.elder-inbed{
+    float: left;
+}
+.elder-inbed div{
+    width: 40px;    
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.loaddiv{
+    width:30px;
+    height: 40px;
+    margin: 0 auto;
+    display:none;
+}
+.loaddiv img{
+    width: 30px;
+}
+
+.goMapIcon{
+    position:absolute;
+    right:10px;
+    bottom:5px;
+    font-size:30px;
+    color:rgba(255,255,255,0.8);
+}
+
+.goMap{
+    width:30px;
+    height:30px;
+    position:absolute;
+    right:5px;
+    bottom:5px;
+    background:transparent;
+    border:none;
+    outline: none;
+}

@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.ban99.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.ban99.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.ban99.com/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestTokenMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestTokenMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestTokenMethodResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyTokenMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyTokenMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifyTokenMethodResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBCGArray">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devicename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBCGArrayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBCGArrayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBreathArray">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devicename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBreathArrayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBreathArrayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHBHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devicename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHBHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHBHistoryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBRHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devicename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBRHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBRHistoryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devicename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWHistoryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBedRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devicename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBedRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBedRecordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSleepRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devicename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSleepRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSleepRecordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAlarm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devicename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAlarmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAlarmResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="RequestTokenMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestTokenMethod" />
+  </wsdl:message>
+  <wsdl:message name="RequestTokenMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestTokenMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyTokenMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyTokenMethod" />
+  </wsdl:message>
+  <wsdl:message name="VerifyTokenMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyTokenMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductList" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBCGArraySoapIn">
+    <wsdl:part name="parameters" element="tns:GetBCGArray" />
+  </wsdl:message>
+  <wsdl:message name="GetBCGArraySoapOut">
+    <wsdl:part name="parameters" element="tns:GetBCGArrayResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBreathArraySoapIn">
+    <wsdl:part name="parameters" element="tns:GetBreathArray" />
+  </wsdl:message>
+  <wsdl:message name="GetBreathArraySoapOut">
+    <wsdl:part name="parameters" element="tns:GetBreathArrayResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHBHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetHBHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetHBHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetHBHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBRHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetBRHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetBRHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetBRHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetWHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetWHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetWHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBedRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBedRecord" />
+  </wsdl:message>
+  <wsdl:message name="GetBedRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBedRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSleepRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSleepRecord" />
+  </wsdl:message>
+  <wsdl:message name="GetSleepRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSleepRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAlarm" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RequestTokenMethodHttpGetIn">
+    <wsdl:part name="appId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RequestTokenMethodHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyTokenMethodHttpGetIn">
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyTokenMethodHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListHttpGetIn">
+    <wsdl:part name="filter" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBCGArrayHttpGetIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBCGArrayHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBreathArrayHttpGetIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBreathArrayHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHBHistoryHttpGetIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="startTime" type="s:string" />
+    <wsdl:part name="endTime" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHBHistoryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBRHistoryHttpGetIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="startTime" type="s:string" />
+    <wsdl:part name="endTime" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBRHistoryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWHistoryHttpGetIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="startTime" type="s:string" />
+    <wsdl:part name="endTime" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWHistoryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBedRecordHttpGetIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="startTime" type="s:string" />
+    <wsdl:part name="endTime" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBedRecordHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSleepRecordHttpGetIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="startTime" type="s:string" />
+    <wsdl:part name="endTime" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSleepRecordHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmHttpGetIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="startTime" type="s:string" />
+    <wsdl:part name="endTime" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RequestTokenMethodHttpPostIn">
+    <wsdl:part name="appId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RequestTokenMethodHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyTokenMethodHttpPostIn">
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyTokenMethodHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListHttpPostIn">
+    <wsdl:part name="filter" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBCGArrayHttpPostIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBCGArrayHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBreathArrayHttpPostIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBreathArrayHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHBHistoryHttpPostIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="startTime" type="s:string" />
+    <wsdl:part name="endTime" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHBHistoryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBRHistoryHttpPostIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="startTime" type="s:string" />
+    <wsdl:part name="endTime" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBRHistoryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWHistoryHttpPostIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="startTime" type="s:string" />
+    <wsdl:part name="endTime" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWHistoryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBedRecordHttpPostIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="startTime" type="s:string" />
+    <wsdl:part name="endTime" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBedRecordHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSleepRecordHttpPostIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="startTime" type="s:string" />
+    <wsdl:part name="endTime" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSleepRecordHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmHttpPostIn">
+    <wsdl:part name="devicename" type="s:string" />
+    <wsdl:part name="startTime" type="s:string" />
+    <wsdl:part name="endTime" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">简单测试接口--返回：Hello World</wsdl:documentation>
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestTokenMethod">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">请求Token</wsdl:documentation>
+      <wsdl:input message="tns:RequestTokenMethodSoapIn" />
+      <wsdl:output message="tns:RequestTokenMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyTokenMethod">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">验证Token</wsdl:documentation>
+      <wsdl:input message="tns:VerifyTokenMethodSoapIn" />
+      <wsdl:output message="tns:VerifyTokenMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">设备列表</wsdl:documentation>
+      <wsdl:input message="tns:GetProductListSoapIn" />
+      <wsdl:output message="tns:GetProductListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBCGArray">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BCG</wsdl:documentation>
+      <wsdl:input message="tns:GetBCGArraySoapIn" />
+      <wsdl:output message="tns:GetBCGArraySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBreathArray">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">呼吸波</wsdl:documentation>
+      <wsdl:input message="tns:GetBreathArraySoapIn" />
+      <wsdl:output message="tns:GetBreathArraySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHBHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">心率历史记录</wsdl:documentation>
+      <wsdl:input message="tns:GetHBHistorySoapIn" />
+      <wsdl:output message="tns:GetHBHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBRHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">呼吸历史记录</wsdl:documentation>
+      <wsdl:input message="tns:GetBRHistorySoapIn" />
+      <wsdl:output message="tns:GetBRHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">重量历史记录</wsdl:documentation>
+      <wsdl:input message="tns:GetWHistorySoapIn" />
+      <wsdl:output message="tns:GetWHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBedRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">上下床记录</wsdl:documentation>
+      <wsdl:input message="tns:GetBedRecordSoapIn" />
+      <wsdl:output message="tns:GetBedRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSleepRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">睡眠质量记录</wsdl:documentation>
+      <wsdl:input message="tns:GetSleepRecordSoapIn" />
+      <wsdl:output message="tns:GetSleepRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">报警记录</wsdl:documentation>
+      <wsdl:input message="tns:GetAlarmSoapIn" />
+      <wsdl:output message="tns:GetAlarmSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebServiceHttpGet">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">简单测试接口--返回：Hello World</wsdl:documentation>
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestTokenMethod">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">请求Token</wsdl:documentation>
+      <wsdl:input message="tns:RequestTokenMethodHttpGetIn" />
+      <wsdl:output message="tns:RequestTokenMethodHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyTokenMethod">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">验证Token</wsdl:documentation>
+      <wsdl:input message="tns:VerifyTokenMethodHttpGetIn" />
+      <wsdl:output message="tns:VerifyTokenMethodHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">设备列表</wsdl:documentation>
+      <wsdl:input message="tns:GetProductListHttpGetIn" />
+      <wsdl:output message="tns:GetProductListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBCGArray">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BCG</wsdl:documentation>
+      <wsdl:input message="tns:GetBCGArrayHttpGetIn" />
+      <wsdl:output message="tns:GetBCGArrayHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBreathArray">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">呼吸波</wsdl:documentation>
+      <wsdl:input message="tns:GetBreathArrayHttpGetIn" />
+      <wsdl:output message="tns:GetBreathArrayHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHBHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">心率历史记录</wsdl:documentation>
+      <wsdl:input message="tns:GetHBHistoryHttpGetIn" />
+      <wsdl:output message="tns:GetHBHistoryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBRHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">呼吸历史记录</wsdl:documentation>
+      <wsdl:input message="tns:GetBRHistoryHttpGetIn" />
+      <wsdl:output message="tns:GetBRHistoryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">重量历史记录</wsdl:documentation>
+      <wsdl:input message="tns:GetWHistoryHttpGetIn" />
+      <wsdl:output message="tns:GetWHistoryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBedRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">上下床记录</wsdl:documentation>
+      <wsdl:input message="tns:GetBedRecordHttpGetIn" />
+      <wsdl:output message="tns:GetBedRecordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSleepRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">睡眠质量记录</wsdl:documentation>
+      <wsdl:input message="tns:GetSleepRecordHttpGetIn" />
+      <wsdl:output message="tns:GetSleepRecordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">报警记录</wsdl:documentation>
+      <wsdl:input message="tns:GetAlarmHttpGetIn" />
+      <wsdl:output message="tns:GetAlarmHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebServiceHttpPost">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">简单测试接口--返回：Hello World</wsdl:documentation>
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestTokenMethod">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">请求Token</wsdl:documentation>
+      <wsdl:input message="tns:RequestTokenMethodHttpPostIn" />
+      <wsdl:output message="tns:RequestTokenMethodHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyTokenMethod">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">验证Token</wsdl:documentation>
+      <wsdl:input message="tns:VerifyTokenMethodHttpPostIn" />
+      <wsdl:output message="tns:VerifyTokenMethodHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">设备列表</wsdl:documentation>
+      <wsdl:input message="tns:GetProductListHttpPostIn" />
+      <wsdl:output message="tns:GetProductListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBCGArray">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BCG</wsdl:documentation>
+      <wsdl:input message="tns:GetBCGArrayHttpPostIn" />
+      <wsdl:output message="tns:GetBCGArrayHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBreathArray">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">呼吸波</wsdl:documentation>
+      <wsdl:input message="tns:GetBreathArrayHttpPostIn" />
+      <wsdl:output message="tns:GetBreathArrayHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHBHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">心率历史记录</wsdl:documentation>
+      <wsdl:input message="tns:GetHBHistoryHttpPostIn" />
+      <wsdl:output message="tns:GetHBHistoryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBRHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">呼吸历史记录</wsdl:documentation>
+      <wsdl:input message="tns:GetBRHistoryHttpPostIn" />
+      <wsdl:output message="tns:GetBRHistoryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">重量历史记录</wsdl:documentation>
+      <wsdl:input message="tns:GetWHistoryHttpPostIn" />
+      <wsdl:output message="tns:GetWHistoryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBedRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">上下床记录</wsdl:documentation>
+      <wsdl:input message="tns:GetBedRecordHttpPostIn" />
+      <wsdl:output message="tns:GetBedRecordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSleepRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">睡眠质量记录</wsdl:documentation>
+      <wsdl:input message="tns:GetSleepRecordHttpPostIn" />
+      <wsdl:output message="tns:GetSleepRecordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">报警记录</wsdl:documentation>
+      <wsdl:input message="tns:GetAlarmHttpPostIn" />
+      <wsdl:output message="tns:GetAlarmHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://www.ban99.com/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestTokenMethod">
+      <soap:operation soapAction="http://www.ban99.com/RequestTokenMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyTokenMethod">
+      <soap:operation soapAction="http://www.ban99.com/VerifyTokenMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList">
+      <soap:operation soapAction="http://www.ban99.com/GetProductList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBCGArray">
+      <soap:operation soapAction="http://www.ban99.com/GetBCGArray" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBreathArray">
+      <soap:operation soapAction="http://www.ban99.com/GetBreathArray" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHBHistory">
+      <soap:operation soapAction="http://www.ban99.com/GetHBHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBRHistory">
+      <soap:operation soapAction="http://www.ban99.com/GetBRHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWHistory">
+      <soap:operation soapAction="http://www.ban99.com/GetWHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBedRecord">
+      <soap:operation soapAction="http://www.ban99.com/GetBedRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSleepRecord">
+      <soap:operation soapAction="http://www.ban99.com/GetSleepRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarm">
+      <soap:operation soapAction="http://www.ban99.com/GetAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://www.ban99.com/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestTokenMethod">
+      <soap12:operation soapAction="http://www.ban99.com/RequestTokenMethod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyTokenMethod">
+      <soap12:operation soapAction="http://www.ban99.com/VerifyTokenMethod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList">
+      <soap12:operation soapAction="http://www.ban99.com/GetProductList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBCGArray">
+      <soap12:operation soapAction="http://www.ban99.com/GetBCGArray" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBreathArray">
+      <soap12:operation soapAction="http://www.ban99.com/GetBreathArray" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHBHistory">
+      <soap12:operation soapAction="http://www.ban99.com/GetHBHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBRHistory">
+      <soap12:operation soapAction="http://www.ban99.com/GetBRHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWHistory">
+      <soap12:operation soapAction="http://www.ban99.com/GetWHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBedRecord">
+      <soap12:operation soapAction="http://www.ban99.com/GetBedRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSleepRecord">
+      <soap12:operation soapAction="http://www.ban99.com/GetSleepRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarm">
+      <soap12:operation soapAction="http://www.ban99.com/GetAlarm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceHttpGet" type="tns:WebServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestTokenMethod">
+      <http:operation location="/RequestTokenMethod" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyTokenMethod">
+      <http:operation location="/VerifyTokenMethod" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList">
+      <http:operation location="/GetProductList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBCGArray">
+      <http:operation location="/GetBCGArray" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBreathArray">
+      <http:operation location="/GetBreathArray" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHBHistory">
+      <http:operation location="/GetHBHistory" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBRHistory">
+      <http:operation location="/GetBRHistory" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWHistory">
+      <http:operation location="/GetWHistory" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBedRecord">
+      <http:operation location="/GetBedRecord" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSleepRecord">
+      <http:operation location="/GetSleepRecord" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarm">
+      <http:operation location="/GetAlarm" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceHttpPost" type="tns:WebServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestTokenMethod">
+      <http:operation location="/RequestTokenMethod" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyTokenMethod">
+      <http:operation location="/VerifyTokenMethod" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList">
+      <http:operation location="/GetProductList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBCGArray">
+      <http:operation location="/GetBCGArray" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBreathArray">
+      <http:operation location="/GetBreathArray" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHBHistory">
+      <http:operation location="/GetHBHistory" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBRHistory">
+      <http:operation location="/GetBRHistory" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWHistory">
+      <http:operation location="/GetWHistory" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBedRecord">
+      <http:operation location="/GetBedRecord" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSleepRecord">
+      <http:operation location="/GetSleepRecord" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarm">
+      <http:operation location="/GetAlarm" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://211.167.103.196:8080/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://211.167.103.196:8080/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceHttpGet" binding="tns:WebServiceHttpGet">
+      <http:address location="http://211.167.103.196:8080/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceHttpPost" binding="tns:WebServiceHttpPost">
+      <http:address location="http://211.167.103.196:8080/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

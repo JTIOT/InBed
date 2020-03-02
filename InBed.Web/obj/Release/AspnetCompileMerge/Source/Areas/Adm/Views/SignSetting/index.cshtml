@@ -1,0 +1,155 @@
+﻿@using System.Text
+@using InBed.Service.Dto
+@{
+    Layout = "/Areas/Adm/Views/Shared/_Layout_Body.cshtml";
+}
+@section StylesBefore{
+    <link href="~/assets/CSS/users.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="~/assets/plugins/daterangepicker/css/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="~/assets/plugins/datatables/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/plugins/datatables/css/dataTables.tableTools.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/plugins/datatables/css/dataTables.colVis.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/plugins/datatables/css/dataTables.responsive.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/plugins/datatables/css/dataTables.scroller.css" rel="stylesheet" type="text/css" />
+}
+@section Scripts{
+    <script src="~/Template/Admin/InBed/js/data-table/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="~/Template/Admin/InBed/js/data-table/js/dataTables.tableTools.min.js" type="text/javascript"></script>
+    <script src="~/Template/Admin/InBed/js/data-table/js/bootstrap-dataTable.js" type="text/javascript"></script>
+    <script src="~/Template/Admin/InBed/js/data-table/js/dataTables.colVis.min.js" type="text/javascript"></script>
+    <script src="~/Template/Admin/InBed/js/data-table/js/dataTables.responsive.min.js" type="text/javascript"></script>
+    <script src="~/Template/Admin/InBed/js/data-table/js/dataTables.scroller.min.js" type="text/javascript"></script>
+    <script src="~/Template/Admin/InBed/js/InBed.tables.js" type="text/javascript"></script>
+    <script src="~/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js" type="text/javascript"></script>
+    <script src="~/assets/plugins/daterangepicker/js/moment.min.js" type="text/javascript"></script>
+    <script src="~/assets/plugins/daterangepicker/js/daterangepicker.js" type="text/javascript"></script>
+    <script>
+        var grid = null;
+
+        function reload() {
+            $("#search").trigger("click");
+        }
+
+        $(function() {
+            var cols = [
+                { data: "Id", name: "Id", orderable: false },
+                { data: "ElderName", name: "ElderName", orderable: false },
+                { data: "Age", name: "Age", orderable: false },
+                { data: "maxheart", name: "maxheart", orderable: true },
+                { data: "minheart", name: "minheart", orderable: true },
+                { data: "s_time", name: "s_time", orderable: true },
+                { data: "e_time", name: "e_time", orderable: true },
+                { data: "leavebedtime", name: "leavebedtime", orderable: true },
+                { data: "maxbreath", name: "maxbreath", orderable: true },
+                { data: "minbreath", name: "minbreath", orderable: true },
+                { data: "pausebreath", name: "pausebreath", orderable: true },
+                { data: "inbedtime", name: "inbedtime", orderable: true },
+                { data: function (e) { return e.typeName; }, name: "set_type", orderable: true }
+            ];
+            var config = {
+                id: "table_server",
+                url: "@Url.Action("GetList",@ViewContext.RouteData.Values)",
+                columns: cols,
+                order: [[4, "desc"]]
+            };
+            grid = new InBed.grid(config);
+            grid.load();
+
+            $(".box-refresh").click(function() {
+                grid.reload();
+            });
+            $("#search").click(function () {
+                grid.reload();
+            });
+        });
+    </script>
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div id="hidden_filter">
+            @* 把需要搜索的条件放到hidden里面，在table格式化完成的时候直接调用$.html()赋值，免去了在js拼接标签的麻烦 *@
+            <div class="row" style="margin-right:0;">
+
+                <form class="form-inline" role="form" id="fromSearch">
+                    <div class="query-con">
+                        <div class="query-box">
+                            <div class="query-item">
+                                <label class="query-label">使用者姓名</label>
+                                <input class="query-content" name="elderName" autocomplete="off">
+                            </div>
+                            <div class="query-item query-right">
+                                <label class="query-label">使用者電話</label>
+                                <input class="query-content" name="elderPhone" autocomplete="off">
+                            </div>
+                            <button type="button" class="btn btn-success btn1" id="search" name="search">搜索</button>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <section class="panel">
+            <header class="panel-heading" style="margin-bottom: 10px;">
+                &nbsp;
+                <span class="tools pull-left">
+                    @if (ViewBag.MyButtons != null)
+                    {
+                        List<MenuDto> btns = ViewBag.MyButtons;
+                        StringBuilder sb = new StringBuilder();
+                        foreach (var btn in btns)
+                        {
+                            sb.AppendFormat("<button type=\"button\" class=\"btn btn-success m-b-10\" onclick=\"InBed.goAction(this,  '{0}', '{1}','{2}', '{3}',grid)\">{4}</button>&nbsp;&nbsp;", ViewContext.RouteData.Values["moudleId"], btn.ParentId, btn.Id, btn.Url, btn.Name);
+                        }
+                        @(new MvcHtmlString(sb.ToString()))
+                    }
+                </span>
+            </header>
+            <table id="table_server" class="table responsive-data-table data-table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 40px;">
+                            選擇
+                        </th>
+                        <th>
+                            使用者姓名
+                        </th>
+                        <th>
+                            年齡
+                        </th>
+                        <th>
+                            心率上限
+                        </th>
+                        <th>
+                            心率下線
+                        </th>
+                        <th>
+                            離床檢測開始時間
+                        </th>
+                        <th>
+                            離床檢測結束時間
+                        </th>
+                        <th>
+                            夜間離床最大時長（分）
+                        </th>
+                        <th>
+                            呼吸频率上限
+                        </th>
+                        <th>
+                            呼吸频率下限
+                        </th>
+                        <th>
+                            呼吸暫停（秒）
+                        </th>
+                        <th>
+                            臥床時長（小時/天）
+                        </th>
+                        <th>
+                            設置類型
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,206 @@
+﻿@using System.Text
+@using InBed.Service.Dto
+@using InBed.Service.Enum
+@model FacilitatorDto
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Adm/Views/Shared/_Layout_Body.cshtml";
+    List<MenuDto> parentMenus = ViewBag.ParentMenu;
+}
+@section StylesBefore{
+    @Styles.Render("~/Template/Admin/InBed/Css/SelectStyle")
+}
+@section Scripts{
+    @Scripts.Render("~/JS/Admin/InBed/Select")
+    <script>
+        $("#submitForm").validate({
+            submitHandler: InBed.buttonLoading,
+            rules: {
+                Code: {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 20
+                },
+                Name: {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 200
+                },
+                Number: {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 20
+                },
+                Contacts: {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 300
+                },
+                Province: {
+                        required: true,
+                        minlength: 1,
+                        maxlength: 300
+                },
+                City: {
+                        required: true,
+                        minlength: 1,
+                        maxlength: 300
+                },
+                District: {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 300
+                },
+                Address: {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 300
+                },
+                Capital: {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 300
+                },
+                Management: {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 300
+                }
+            },
+            messages: {
+                Code: {
+                    required: "請輸入服務商編號",
+                    minlength: "最小長度為2個字符",
+                    maxlength: "最大長度為20個字符"
+                },
+                Name: {
+                    required: "請輸入服務商名稱",
+                    minlength: "最小長度為2個字符",
+                    maxlength: "最大長度為20個字符"
+                },
+                Number: {
+                    required: "請輸工商註冊碼",
+                    minlength: "最小長度為10個字符",
+                    maxlength: "最大長度為20個字符"
+                },
+                Contacts: {
+                    required: "請輸入企業聯繫人",
+                    minlength: "最小長度為2個字符",
+                    maxlength: "最大長度為20個字符"
+                },
+                Province: {
+                    required: "請輸入企業地址（省份）",
+                    minlength: "最小長度為2個字符",
+                    maxlength: "最大長度為20個字符"
+                },
+                City: {
+                    required: "請輸入企業地址（城市）",
+                    minlength: "最小長度為2個字符",
+                    maxlength: "最大長度為20個字符"
+                },
+                District: {
+                    required: "請輸入企業地址（區/縣）",
+                    minlength: "最小長度為2個字符",
+                    maxlength: "最大長度為20個字符"
+                },
+                Address: {
+                    required: "請輸入企業詳細地址",
+                    minlength: "最小長度為2個字符",
+                    maxlength: "最大長度為20個字符"
+                },
+                Capital: {
+                    required: "請輸入企業註冊資金（沒有0）",
+                    minlength: "最小長度為2個字符",
+                    maxlength: "最大長度為20個字符"
+                },
+                Management: {
+                    required: "請輸入經營範圍，沒有用#",
+                    minlength: "最小長度為1個字符",
+                    maxlength: "最大長度為20個字符"
+                }
+            }
+        });
+    </script>
+}
+<div class="row">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+                添加下級服務商
+            </header>
+            <div class="panel-body">
+                <div class="form">
+                    <form class="cmxform form-horizontal tasi-form" id="submitForm" method="POST" action="@Request.Url.PathAndQuery" novalidate="novalidate">
+                        @Html.HiddenFor(item => item.Id, new { @class = "form-control" })
+                        <div class="form-group ">
+                            @Html.LabelFor(item => item.Code, new { @class = "control-label col-lg-2" })
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(item => item.Code, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            @Html.LabelFor(item => item.Name, new { @class = "control-label col-lg-2" })
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(item => item.Name, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            @Html.LabelFor(item => item.Number, new { @class = "control-label col-lg-2" })
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(item => item.Number, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            @Html.LabelFor(item => item.Contacts, new { @class = "control-label col-lg-2" })
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(item => item.Contacts, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            @Html.LabelFor(item => item.Province, new { @class = "control-label col-lg-2" })
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(item => item.Province, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            @Html.LabelFor(item => item.City, new { @class = "control-label col-lg-2" })
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(item => item.City, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            @Html.LabelFor(item => item.District, new { @class = "control-label col-lg-2" })
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(item => item.District, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            @Html.LabelFor(item => item.Address, new { @class = "control-label col-lg-2" })
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(item => item.Address, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            @Html.LabelFor(item => item.Capital, new { @class = "control-label col-lg-2" })
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(item => item.Capital, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            @Html.LabelFor(item => item.Management, new { @class = "control-label col-lg-2" })
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(item => item.Management, new { @class = "form-control" })
+                            </div>
+                        </div>                    
+                        <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                                <button class="btn btn-success" type="submit">保存</button>
+                                <button class="btn btn-default" type="button" onclick="InBed.goback(this)">返回</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+
+.registration-form{
+    width:100%;
+    border:1px solid #000;
+    margin: 0 auto;
+    position: relative;
+    margin-top:50px;
+    color:#fff;
+}
+.registration-form td,th{
+    border:1px solid #000;
+    padding:4px;
+    border-color:#fff;
+}
+
+#icon_validate{
+    position:relative;
+}
+table .fa-times{
+    position:absolute;
+    color:#E55957;
+    top:15px;
+    right:15px;
+}
+table .fa-check{
+    position:absolute;
+    color:#3c763d;
+    top:15px;
+    right:15px;
+}
+
+.registration-form th{
+    text-align: center;
+    font-size:15px;
+}
+table input{
+    outline: none;
+    border:none;
+    background: transparent;
+}
+table input[type="radio"],input[type="checkbox"]{
+    margin-left:20px;
+    display:inline-block
+}
+table input[type="text"]{
+
+}
+table input[type="submit"]{
+
+}
+table span{
+    margin-left: 20px;
+    display: inline-block;
+}
+.radio{
+    display: inline-block;
+}
+
+.registration-form-text{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.btn-box{
+    position: absolute;
+    top:-50px;
+    right: 50px;
+}
+.registration-form-submit .btn{
+    margin-right: 10px;
+}
+.form-control{
+    display: inline-block;
+}
+.form-group{
+    margin-bottom: 0;
+}

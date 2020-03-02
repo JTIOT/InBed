@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Welcome";
+    Layout = "~/Areas/Adm/Views/Shared/_Layout_Body.cshtml";
+}
+@section StylesBefore{
+    <link href="~/assets/css/index.css" rel="stylesheet" type="text/css" />
+}
+@section Scripts{
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=TuNY8zbjIexxzrhwfXmwDCBAmDuCUdxX"></script>
+    <script src="~/assets/js/mapv.min.js" type="text/javascript"></script>
+    <script src="~/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="~/assets/js/echarts.js" type="text/javascript"></script>
+    <script src="~/assets/js/index-map.js" type="text/javascript"></script>
+    <script src="~/assets/js/index-echart.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function indexData() {
+            $.ajax({
+                type: "get",
+                url: "/Control/GetElderCount",
+                dataType: "json",
+                success: function (result) {
+                    $('#sumCount').html(result.SumCount + '人');
+                    $('#newCount').html(result.NewCount + '人/天');
+                    $('.system_number').show();
+                }
+            })
+        }
+        indexData();
+    </script>
+}
+
+<div id="map-container">
+    <div id="map"></div>
+    <!--<canvas id="canvas"></canvas>-->
+
+</div>
+<div class="clearfix"></div>
+<div class="chart1">
+    <div id="echart1"></div>
+</div>
+<div class="chart2">
+
+    <div id="echart2"></div>
+
+    <!--
+    <ul class="elder-dis">
+        <li>
+            <div class="colorBox bg0"></div>
+            <p class="colorLabel">60歲以下老人</p>
+        </li>
+        <li>
+            <div class="colorBox bg1"></div>
+            <p class="colorLabel">60-70歲老人</p>
+        </li>
+        <li>
+            <div class="colorBox bg2"></div>
+            <p class="colorLabel">70-75歲老人</p>
+        </li>
+        <li>
+            <div class="colorBox bg3"></div>
+            <p class="colorLabel">75-80歲老人</p>
+        </li>
+        <li>
+            <div class="colorBox bg4"></div>
+            <p class="colorLabel">80歲以上老人</p>
+        </li>
+    </ul>
+    -->
+</div>
+<div class="chart3">
+    <div id="echart3"></div>
+
+</div>
+<!--
+<div class="system_number">
+    <div class="system_number1">
+        <p>系統總人數：<span id="sumCount"></span></p>
+        <p>用戶增長量：<span id="newCount"></span></p>
+    </div>
+</div>
+-->
+<div class="service_number">
+    <div class="service_number1">
+        <p class="p_name"></p>
+    </div>
+
+</div>
+
+
+
+
+

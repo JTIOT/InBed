@@ -1,0 +1,437 @@
+
+/*-------------------------------------------------1920px-------------------------------------------------*/
+@media screen and (max-width:1860px){
+
+.chart1{
+    position: absolute;
+    top:-30px;
+    left: 30px;
+    height:300px;
+    overflow :auto;
+    padding-left:30px;
+}
+
+#echart1{
+    width:400px;
+    height:500px;
+}
+
+.chart2{
+    position: absolute;
+    top: 280px;
+    left: 0px;
+}
+#echart2{
+    width:300px;
+    height:300px;
+}
+.elder-dis{
+    position: absolute;
+    right: -90px;
+    top:55px;
+    list-style: none;
+}
+.colorBox{
+    width:15px;
+    height: 15px;
+    display: inline-block;
+}
+
+
+.chart3{
+    position: absolute;
+    bottom:30px;
+    left: -40px;
+}
+#echart3{
+    width:600px;
+    height:350px;
+}
+
+.system_number{
+    padding: 30px;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    top:100px;
+    right: 150px;
+}
+
+.system_number>p{
+    font-size: 20px;
+    text-align: center;
+    color:#fff;
+}
+
+.service_number{
+    padding: 30px;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    top:450px;
+    right: 150px;
+    display: none;
+}
+.service_number>p{
+    font-size: 20px;
+    text-align: center;
+    color:#fff;
+}
+}
+
+/*-------------------------------------------------1600px-------------------------------------------------*/
+@media screen and /*(min-width: 1px) and*/ (max-width: 1540px) {
+
+.chart1{
+    position: absolute;
+    top:-35px;
+    left: 30px;
+    height:250px;
+    overflow :auto;
+}
+#echart1{
+    width:320px;
+    height:1200px;
+}
+
+.chart2{
+    position: absolute;
+    top: 210px;
+    left: -25px;
+}
+#echart2{
+    width:280px;
+    height:260px;
+}
+.elder-dis{
+    position: absolute;
+    right: -50px;
+    top:35px;
+    list-style: none;
+    padding-left: 0px;
+}
+.elder-dis p{
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+.colorBox{
+    width:10px;
+    height: 10px;
+    display: inline-block;
+}
+
+.chart3{
+    position: absolute;
+    top:435px;
+    left: -30px;
+}
+#echart3{
+    width:400px;
+    height:320px;
+}
+
+.system_number{
+    padding: 20px;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    top:50px;
+    right: 50px;
+}
+
+.system_number>p{
+    font-size: 16px;
+    text-align: center;
+    color:#fff;
+}
+
+.service_number{
+    padding: 20px;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    bottom:100px;
+    right: 50px;
+    display: none;
+}
+.service_number>p{
+    font-size: 16px;
+    text-align: center;
+    color:#fff;
+}
+}
+
+/*-------------------------------------------------1440px-------------------------------------------------*/
+@media screen and /*(min-width: 1px) and*/ (max-width: 1190px) {
+
+.chart1{
+    position: absolute;
+    top:-45px;
+    left: 20px;
+}
+#echart1{
+    width:320px;
+    height:280px;
+}
+
+.chart2{
+    position: absolute;
+    top: 200px;
+    left: -35px;
+}
+#echart2{
+    width:280px;
+    height:250px;
+}
+.elder-dis{
+    position: absolute;
+    right: -50px;
+    top:35px;
+    list-style: none;
+    padding-left: 0px;
+}
+.elder-dis p{
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+.colorBox{
+    width:10px;
+    height: 10px;
+    display: inline-block;
+}
+
+.chart3{
+    position: absolute;
+    top:415px;
+    left: -40px;
+}
+#echart3{
+    width:400px;
+    height:340px;
+}
+
+.system_number{
+    padding: 20px;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    top:50px;
+    right: 50px;
+}
+
+.system_number>p{
+    font-size: 16px;
+    text-align: center;
+    color:#fff;
+}
+
+.service_number{
+    padding: 20px;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    bottom:100px;
+    right: 50px;
+    display: none;
+}
+.service_number>p{
+    font-size: 16px;
+    text-align: center;
+    color:#fff;
+}
+}
+
+/*-------------------------------------------------1366px-------------------------------------------------*/
+@media screen and /*(min-width: 1px) and*/ (max-width: 1306px) {
+
+.chart1{
+    position: absolute;
+    top:-50px;
+    left: -10px;
+    height:210px;
+    overflow :auto;
+}
+#echart1{
+    width:390px;
+    height:1200px;
+}
+
+.chart2{
+    position: absolute;
+    top: 160px;
+    left: -45px;
+}
+#echart2{
+    width:300px;
+    height:215px;
+}
+.elder-dis{
+    position: absolute;
+    right: -35px;
+    top:35px;
+    list-style: none;
+    padding-left: 0px;
+}
+.elder-dis p{
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+.colorBox{
+    width:10px;
+    height: 10px;
+    display: inline-block;
+}
+
+.chart3{
+    position: absolute;
+    top:325px;
+    left: -40px;
+}
+#echart3{
+    width:400px;
+    height:310px;
+}
+
+.system_number{
+    padding: 20px;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    top:50px;
+    right: 50px;
+}
+
+.system_number>p{
+    font-size: 16px;
+    text-align: center;
+    color:#fff;
+}
+
+.service_number{
+    padding: 20px;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    bottom:100px;
+    right: 50px;
+    display: none;
+}
+.service_number>p{
+    font-size: 16px;
+    text-align: center;
+    color:#fff;
+}
+}
+
+
+/*--------------------------------------------------Í¨ÓÃ--------------------------------------------------*/
+
+body{
+	overflow:scroll;
+    overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+body,html {
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+    margin: 0;
+    font-family: "Î¢ÈíÑÅºÚ";
+}
+
+#map-container{
+    width:100%;
+    height:100%;
+    float:left;
+    overflow: hidden;
+    margin:0;
+
+}
+#map{
+    width:100%;
+    margin:3px 0 0;
+    height:100%;
+    float:left;
+    overflow: hidden;
+}
+
+/*#time{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        color: #fff;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.3);
+}*/
+
+.anchorBL{display:none;}
+
+.chart1::-webkit-scrollbar {
+    display: none;
+}
+
+.colorLabel{
+    color: #fff;
+    display: inline-block;
+}
+
+.bg0{
+    background-color: #2EA3DD;
+}
+
+.bg1{
+    background-color: #fa8564;
+}
+
+.bg2{
+    background-color: #9972b5;
+}
+
+.bg3{
+    background-color: #1fb5ac;
+}
+
+.bg4{
+    background-color: #FDB45C;
+}
+
+.elder-dis{
+    display:none;
+}
+.system_number{
+    display:none;
+    border-radius:20px;
+    padding:10px;
+}
+
+.system_number1{
+    padding:20px;
+    border:5px solid #fff;
+    border-radius:20px;
+}
+
+.system_number1>p{
+    font-size: 20px;
+    text-align: left;
+    color:#fff;
+}
+
+.service_number{
+    border-radius:20px;
+    padding:10px;
+}
+
+.service_number1{
+    padding:20px;
+    border:5px solid #fff;
+    border-radius:20px;
+}
+
+.service_number1>p{
+    font-size: 20px;
+    text-align: left;
+    color:#fff;
+}
+
+
+.twinkle-bell{
+    animation:twinkle-bell 1s ease infinite;
+}
+
+@keyframes twinkle-bell {
+        0% {color:red}
+        100%{color:white}
+}

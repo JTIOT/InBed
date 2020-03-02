@@ -1,0 +1,165 @@
+记录时间：2017-10-23 10:19:16,338 线程ID:[18] 日志级别：ERROR 出错类：logerror property:[(null)] - 错误描述：
+发生时间:2017/10/23 10:19:16
+用户IP:::1
+发生异常页: http://localhost:37297/Adm/Statistics/PressureStatistics/1096/1115/0
+控制器: Statistics
+Action: PressureStatistics
+
+System.InvalidOperationException: 未找到视图“PressureStatistics”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Areas/Adm/Views/Statistics/PressureStatistics.aspx
+~/Areas/Adm/Views/Statistics/PressureStatistics.ascx
+~/Areas/Adm/Views/Shared/PressureStatistics.aspx
+~/Areas/Adm/Views/Shared/PressureStatistics.ascx
+~/Views/Statistics/PressureStatistics.aspx
+~/Views/Statistics/PressureStatistics.ascx
+~/Views/Shared/PressureStatistics.aspx
+~/Views/Shared/PressureStatistics.ascx
+~/Areas/Adm/Views/Statistics/PressureStatistics.cshtml
+~/Areas/Adm/Views/Statistics/PressureStatistics.vbhtml
+~/Areas/Adm/Views/Shared/PressureStatistics.cshtml
+~/Areas/Adm/Views/Shared/PressureStatistics.vbhtml
+~/Views/Statistics/PressureStatistics.cshtml
+~/Views/Statistics/PressureStatistics.vbhtml
+~/Views/Shared/PressureStatistics.cshtml
+~/Views/Shared/PressureStatistics.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+记录时间：2017-10-23 10:19:18,004 线程ID:[18] 日志级别：ERROR 出错类：logerror property:[(null)] - 错误描述：
+发生时间:2017/10/23 10:19:18
+用户IP:::1
+发生异常页: http://localhost:37297/Adm/Statistics/BRStatistics/1096/1114/0
+控制器: Statistics
+Action: BRStatistics
+
+System.InvalidOperationException: 未找到视图“BRStatistics”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Areas/Adm/Views/Statistics/BRStatistics.aspx
+~/Areas/Adm/Views/Statistics/BRStatistics.ascx
+~/Areas/Adm/Views/Shared/BRStatistics.aspx
+~/Areas/Adm/Views/Shared/BRStatistics.ascx
+~/Views/Statistics/BRStatistics.aspx
+~/Views/Statistics/BRStatistics.ascx
+~/Views/Shared/BRStatistics.aspx
+~/Views/Shared/BRStatistics.ascx
+~/Areas/Adm/Views/Statistics/BRStatistics.cshtml
+~/Areas/Adm/Views/Statistics/BRStatistics.vbhtml
+~/Areas/Adm/Views/Shared/BRStatistics.cshtml
+~/Areas/Adm/Views/Shared/BRStatistics.vbhtml
+~/Views/Statistics/BRStatistics.cshtml
+~/Views/Statistics/BRStatistics.vbhtml
+~/Views/Shared/BRStatistics.cshtml
+~/Views/Shared/BRStatistics.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+记录时间：2017-10-23 10:19:19,358 线程ID:[19] 日志级别：ERROR 出错类：logerror property:[(null)] - 错误描述：
+发生时间:2017/10/23 10:19:19
+用户IP:::1
+发生异常页: http://localhost:37297/Adm/Statistics/pressureStatistics/1096/1148/0
+控制器: Statistics
+Action: pressureStatistics
+
+System.InvalidOperationException: 未找到视图“pressureStatistics”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Areas/Adm/Views/Statistics/pressureStatistics.aspx
+~/Areas/Adm/Views/Statistics/pressureStatistics.ascx
+~/Areas/Adm/Views/Shared/pressureStatistics.aspx
+~/Areas/Adm/Views/Shared/pressureStatistics.ascx
+~/Views/Statistics/pressureStatistics.aspx
+~/Views/Statistics/pressureStatistics.ascx
+~/Views/Shared/pressureStatistics.aspx
+~/Views/Shared/pressureStatistics.ascx
+~/Areas/Adm/Views/Statistics/pressureStatistics.cshtml
+~/Areas/Adm/Views/Statistics/pressureStatistics.vbhtml
+~/Areas/Adm/Views/Shared/pressureStatistics.cshtml
+~/Areas/Adm/Views/Shared/pressureStatistics.vbhtml
+~/Views/Statistics/pressureStatistics.cshtml
+~/Views/Statistics/pressureStatistics.vbhtml
+~/Views/Shared/pressureStatistics.cshtml
+~/Views/Shared/pressureStatistics.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+记录时间：2017-10-23 10:19:20,176 线程ID:[21] 日志级别：ERROR 出错类：logerror property:[(null)] - 错误描述：
+发生时间:2017/10/23 10:19:20
+用户IP:::1
+发生异常页: http://localhost:37297/Adm/Statistics/BRStatistics/1096/1149/0
+控制器: Statistics
+Action: BRStatistics
+
+System.InvalidOperationException: 未找到视图“BRStatistics”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Areas/Adm/Views/Statistics/BRStatistics.aspx
+~/Areas/Adm/Views/Statistics/BRStatistics.ascx
+~/Areas/Adm/Views/Shared/BRStatistics.aspx
+~/Areas/Adm/Views/Shared/BRStatistics.ascx
+~/Views/Statistics/BRStatistics.aspx
+~/Views/Statistics/BRStatistics.ascx
+~/Views/Shared/BRStatistics.aspx
+~/Views/Shared/BRStatistics.ascx
+~/Areas/Adm/Views/Statistics/BRStatistics.cshtml
+~/Areas/Adm/Views/Statistics/BRStatistics.vbhtml
+~/Areas/Adm/Views/Shared/BRStatistics.cshtml
+~/Areas/Adm/Views/Shared/BRStatistics.vbhtml
+~/Views/Statistics/BRStatistics.cshtml
+~/Views/Statistics/BRStatistics.vbhtml
+~/Views/Shared/BRStatistics.cshtml
+~/Views/Shared/BRStatistics.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+记录时间：2017-10-23 10:19:20,942 线程ID:[20] 日志级别：ERROR 出错类：logerror property:[(null)] - 错误描述：
+发生时间:2017/10/23 10:19:20
+用户IP:::1
+发生异常页: http://localhost:37297/Adm/Statistics/BRStatistics/1096/1114/0
+控制器: Statistics
+Action: BRStatistics
+
+System.InvalidOperationException: 未找到视图“BRStatistics”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Areas/Adm/Views/Statistics/BRStatistics.aspx
+~/Areas/Adm/Views/Statistics/BRStatistics.ascx
+~/Areas/Adm/Views/Shared/BRStatistics.aspx
+~/Areas/Adm/Views/Shared/BRStatistics.ascx
+~/Views/Statistics/BRStatistics.aspx
+~/Views/Statistics/BRStatistics.ascx
+~/Views/Shared/BRStatistics.aspx
+~/Views/Shared/BRStatistics.ascx
+~/Areas/Adm/Views/Statistics/BRStatistics.cshtml
+~/Areas/Adm/Views/Statistics/BRStatistics.vbhtml
+~/Areas/Adm/Views/Shared/BRStatistics.cshtml
+~/Areas/Adm/Views/Shared/BRStatistics.vbhtml
+~/Views/Statistics/BRStatistics.cshtml
+~/Views/Statistics/BRStatistics.vbhtml
+~/Views/Shared/BRStatistics.cshtml
+~/Views/Shared/BRStatistics.vbhtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)

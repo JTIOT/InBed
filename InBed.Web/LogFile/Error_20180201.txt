@@ -1,0 +1,28 @@
+????：2018-02-01 16:16:49,082 ?程ID:[113] 日志??：ERROR 出??：logerror property:[(null)] - ??描述：
+?生??:2018-02-01 16:16:48
+用?IP:::1
+?生异常?: http://localhost:37297/Adm/Control/index
+控制器: Control
+Action: index
+
+System.IndexOutOfRangeException: 索引在陣列的界限之外。
+   於 ASP._Page_Areas_Adm_Views_Shared__Layout_cshtml.Execute() 於 d:\Inbed-TW\Inbed-TW\InBed.Web\Areas\Adm\Views\Shared\_Layout.cshtml: 行 139
+   於 System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   於 System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   於 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   於 System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+   於 System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   於 System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   於 System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   於 System.Web.WebPages.WebPageBase.PopContext()
+   於 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   於 System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   於 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   於 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)

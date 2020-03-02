@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6160CD1-D241-4293-92F5-451749C7FC3A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InBed.Service</RootNamespace>
+    <AssemblyName>InBed.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.Extended, Version=6.0.0.0, Culture=neutral, PublicKeyToken=05b7e29bdd433584, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Extended.6.1.0.168\lib\net45\EntityFramework.Extended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mehdime.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mehdime.Entity.1.0.0\lib\Mehdime.Entity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstracts\IAlarmService.cs" />
+    <Compile Include="Abstracts\IElderAlarmSetupService.cs" />
+    <Compile Include="Abstracts\IElderAnalysisService.cs" />
+    <Compile Include="Abstracts\IHeartRate.cs" />
+    <Compile Include="Abstracts\IUseSetUPService.cs" />
+    <Compile Include="Dto\AlarmDto.cs" />
+    <Compile Include="Dto\AlarmSetupDto.cs" />
+    <Compile Include="Dto\BindingDto.cs" />
+    <Compile Include="Dto\ElderAnalysisDto.cs" />
+    <Compile Include="Dto\ElderCountDto.cs" />
+    <Compile Include="Dto\ElderHeartRate.cs" />
+    <Compile Include="Dto\ElderInfoDto.cs" />
+    <Compile Include="Dto\ElderStatisticsDto.cs" />
+    <Compile Include="Dto\HalfMonthOnBedRecordDto.cs" />
+    <Compile Include="Dto\HeartRateDto.cs" />
+    <Compile Include="Dto\MapPositionDto.cs" />
+    <Compile Include="Dto\MessageDto.cs" />
+    <Compile Include="Dto\ProvinceNumberDto.cs" />
+    <Compile Include="Dto\SleepingTimeDto.cs" />
+    <Compile Include="Dto\SystemElderSetupDto.cs" />
+    <Compile Include="Dto\TypeAlarmDto.cs" />
+    <Compile Include="Dto\UseSetUPDto.cs" />
+    <Compile Include="Enum\AlarmType.cs" />
+    <Compile Include="Enum\FacilitatorLevel.cs" />
+    <Compile Include="Enum\SetType.cs" />
+    <Compile Include="Enum\SleepType.cs" />
+    <Compile Include="Impl\AlarmService.cs" />
+    <Compile Include="Impl\AutoMapperConfiguration.Partial.cs" />
+    <Compile Include="Impl\DeviceBindingService.cs" />
+    <Compile Include="Impl\DeviceService.cs" />
+    <Compile Include="Impl\ElderAlarmSetupService.cs" />
+    <Compile Include="Impl\ElderAnalysisService.cs" />
+    <Compile Include="Impl\ElderService.cs" />
+    <Compile Include="Impl\FacilitatorService.cs" />
+    <Compile Include="Abstracts\IDeviceBinding.cs" />
+    <Compile Include="Abstracts\IDeviceService.cs" />
+    <Compile Include="Abstracts\IElderService.cs" />
+    <Compile Include="Abstracts\IEmailPoolService.cs" />
+    <Compile Include="Abstracts\IEmailPoolService.Partial.cs" />
+    <Compile Include="Abstracts\IEmailReceiverService.Partial.cs" />
+    <Compile Include="Abstracts\IFacilitatorService.cs" />
+    <Compile Include="Abstracts\IHearbeatStatusService.cs" />
+    <Compile Include="Abstracts\ILoginLogService.Partial.cs" />
+    <Compile Include="Abstracts\IMenuService.Partial.cs" />
+    <Compile Include="Abstracts\IOnBedRecordService.cs" />
+    <Compile Include="Abstracts\IPageViewService.Partial.cs" />
+    <Compile Include="Abstracts\IRoleMenuService.Partial.cs" />
+    <Compile Include="Abstracts\IRoleService.Partial.cs" />
+    <Compile Include="Abstracts\ISleepingService.cs" />
+    <Compile Include="Abstracts\IUserRoleService.Partial.cs" />
+    <Compile Include="Abstracts\IUserService.cs" />
+    <Compile Include="Abstracts\IUserService.Partial.cs" />
+    <Compile Include="Impl\HeartRateService.cs" />
+    <Compile Include="Impl\LoginLogService.Partial.cs" />
+    <Compile Include="Impl\MenuService.Partial.cs" />
+    <Compile Include="Impl\OnBedRecordService.cs" />
+    <Compile Include="Impl\PageViewService.Partial.cs" />
+    <Compile Include="Impl\RoleMenuService.Partial.cs" />
+    <Compile Include="Impl\RoleService.Partial.cs" />
+    <Compile Include="Impl\SleepingService.cs" />
+    <Compile Include="Impl\UserRoleService.Partial.cs" />
+    <Compile Include="Impl\UserService.cs" />
+    <Compile Include="Impl\UserService.Partial.cs" />
+    <Compile Include="AutoMapperConfiguration.cs" />
+    <Compile Include="AutoMapperHelper.cs" />
+    <Compile Include="Config\EmailConfiguration.cs" />
+    <Compile Include="Dto\BaseDto.cs" />
+    <Compile Include="Dto\DeviceBindingDto.cs" />
+    <Compile Include="Dto\DeviceDto.cs" />
+    <Compile Include="Dto\ElderDto.cs" />
+    <Compile Include="Dto\ElderObjectDto.cs" />
+    <Compile Include="Dto\EmailPoolDto.cs" />
+    <Compile Include="Dto\EmailReceiverDto.cs" />
+    <Compile Include="Dto\FacilitatorDto.cs" />
+    <Compile Include="Dto\HearbeatStatusDto.cs" />
+    <Compile Include="Dto\OnBedRecordDto.cs" />
+    <Compile Include="Dto\PageViewDto.cs" />
+    <Compile Include="Dto\QueryBase.cs" />
+    <Compile Include="Dto\ResultDto.cs" />
+    <Compile Include="Data\DbInitService.cs" />
+    <Compile Include="Dto\LoginLogDto.cs" />
+    <Compile Include="Dto\MenuDto.cs" />
+    <Compile Include="Dto\RoleMenuDto.cs" />
+    <Compile Include="Dto\RoleDto.cs" />
+    <Compile Include="Dto\SleepingTimePeriodDto.cs" />
+    <Compile Include="Dto\UserRoleDto.cs" />
+    <Compile Include="Dto\UserDto.cs" />
+    <Compile Include="Enum\DeviceStatus.cs" />
+    <Compile Include="Enum\DeviceType.cs" />
+    <Compile Include="Enum\ElderEnum.cs" />
+    <Compile Include="Enum\EmailReceiverType.cs" />
+    <Compile Include="Enum\EmailStatus.cs" />
+    <Compile Include="Enum\MenuType.cs" />
+    <Compile Include="Enum\UserStatus.cs" />
+    <Compile Include="Impl\UseSetUPService.cs" />
+    <Compile Include="ObjClass.cs" />
+    <Compile Include="Pay\Alipay\AlipayConfig.cs" />
+    <Compile Include="Pay\Alipay\AlipayConfiguration.cs" />
+    <Compile Include="Pay\Alipay\AlipayCore.cs" />
+    <Compile Include="Pay\Alipay\AlipayNotify.cs" />
+    <Compile Include="Pay\Alipay\AlipaySubmit.cs" />
+    <Compile Include="Pay\Alipay\MD5.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\AlarmRequest.cs" />
+    <Compile Include="Request\AlarmSetupRequest.cs" />
+    <Compile Include="Request\BaseRequest.cs" />
+    <Compile Include="Request\DeviceBindingRequest.cs" />
+    <Compile Include="Request\DeviceRequest.cs" />
+    <Compile Include="Request\ElderAnalysisRequest.cs" />
+    <Compile Include="Request\ElderRequest.cs" />
+    <Compile Include="Request\FacilitatorRequest.cs" />
+    <Compile Include="Request\GetUserRequest.cs" />
+    <Compile Include="Request\LogRequest.cs" />
+    <Compile Include="Request\MenuRequest.cs" />
+    <Compile Include="Request\PageViewRequest.cs" />
+    <Compile Include="Request\RoleRequest.cs" />
+    <Compile Include="Request\UseSetUPRequest.cs" />
+    <Compile Include="Service References\CompanionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OnBedService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="MultipleOutputHelper.ttinclude" />
+    <None Include="packages.config" />
+    <None Include="Service References\CompanionService\BusinessProcessWsService.wsdl" />
+    <None Include="Service References\CompanionService\InBed.Service.CompanionService.GetSleepDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CompanionService\InBed.Service.CompanionService.SendRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OnBedService\WebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InBed.Core\InBed.Core.csproj">
+      <Project>{55aa4b79-e6e7-4444-95d1-d67354a36ebb}</Project>
+      <Name>InBed.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InBed.Data\InBed.Data.csproj">
+      <Project>{1a890dc4-f856-4454-a78a-ee01c77351d1}</Project>
+      <Name>InBed.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InBed.Entity\InBed.Entity.csproj">
+      <Project>{7dc964b7-0b90-4ff2-91cc-0ab5462741aa}</Project>
+      <Name>InBed.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CompanionService\" />
+    <WCFMetadataStorage Include="Service References\OnBedService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OnBedService\WebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OnBedService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OnBedService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OnBedService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CompanionService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CompanionService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CompanionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

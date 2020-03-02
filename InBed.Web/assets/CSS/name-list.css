@@ -1,0 +1,85 @@
+.query-con{
+    margin: 20px auto;
+    width: 100%;
+    padding:0 50px;
+    position: relative;
+}
+
+.query-box1{
+    margin:30px 0;
+}
+.query-item{
+    display: inline-block;
+}
+
+.query-label{
+    width:80px;
+    color:#fff;
+    font-size: 16px;
+    text-align: right;
+}
+
+.query-content{
+    width:225px;
+    height: 30px;
+    outline: none;
+    border: 0;
+    border-radius: 4px !important;
+    padding: 0 12px;
+}
+
+.query-select{
+    width:225px;
+    height: 30px;
+    outline: none;
+    border: 0;
+    border-radius: 4px;
+    padding-left:6px;
+}
+
+.query-right{
+    position: absolute;
+    right:250px;
+}
+
+.search-btn{
+    position: absolute;
+    border: 1px solid #fff;
+    right:110px;
+    background: #001c33;
+    color:#fff;
+}
+
+.search-btn:hover{
+    background: #6699cc;
+    color:#fff;
+}
+
+.btn-box{
+    margin:0 50px;
+    padding:30px 0;
+    border-bottom: 2px solid #fff;
+}
+.btn-box button{
+    border: 1px solid #fff;
+    margin-right: 50px;
+    background: #001c33;
+    color:#fff;
+}
+.btn-box button:hover{
+    background: #6699cc;
+    color:#fff;
+}
+
+.table-con{
+    margin: 20px auto;
+    width: 100%;
+    padding:0 50px;
+    font-size: 16px;
+    color:#fff;
+}
+.table-con tbody tr:hover{
+    background: rgba(255,255,255,0.1);
+    
+}
+

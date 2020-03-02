@@ -1,0 +1,14 @@
+D:\code\jucheap-JuCheap.2.0-master\JuCheap.2.0\JuCheap.Entity\bin\Debug\JuCheap.Entity.dll
+D:\code\jucheap-JuCheap.2.0-master\JuCheap.2.0\JuCheap.Entity\bin\Debug\JuCheap.Entity.pdb
+D:\code\jucheap-JuCheap.2.0-master\JuCheap.2.0\JuCheap.Entity\bin\Debug\Newtonsoft.Json.dll
+D:\code\jucheap-JuCheap.2.0-master\JuCheap.2.0\JuCheap.Entity\bin\Debug\Newtonsoft.Json.xml
+D:\code\jucheap-JuCheap.2.0-master\JuCheap.2.0\JuCheap.Entity\obj\Debug\JuCheap.Entity.csprojResolveAssemblyReference.cache
+D:\code\jucheap-JuCheap.2.0-master\JuCheap.2.0\JuCheap.Entity\obj\Debug\JuCheap.Entity.dll
+D:\code\jucheap-JuCheap.2.0-master\JuCheap.2.0\JuCheap.Entity\obj\Debug\JuCheap.Entity.pdb
+E:\上源物联网\jucheap-JuCheap.2.0-master\jucheap-JuCheap.2.0-master\JuCheap.2.0\JuCheap.Entity\bin\Debug\JuCheap.Entity.dll
+E:\上源物联网\jucheap-JuCheap.2.0-master\jucheap-JuCheap.2.0-master\JuCheap.2.0\JuCheap.Entity\bin\Debug\JuCheap.Entity.pdb
+E:\上源物联网\jucheap-JuCheap.2.0-master\jucheap-JuCheap.2.0-master\JuCheap.2.0\JuCheap.Entity\bin\Debug\Newtonsoft.Json.dll
+E:\上源物联网\jucheap-JuCheap.2.0-master\jucheap-JuCheap.2.0-master\JuCheap.2.0\JuCheap.Entity\bin\Debug\Newtonsoft.Json.xml
+E:\上源物联网\jucheap-JuCheap.2.0-master\jucheap-JuCheap.2.0-master\JuCheap.2.0\JuCheap.Entity\obj\Debug\JuCheap.Entity.csprojResolveAssemblyReference.cache
+E:\上源物联网\jucheap-JuCheap.2.0-master\jucheap-JuCheap.2.0-master\JuCheap.2.0\JuCheap.Entity\obj\Debug\JuCheap.Entity.dll
+E:\上源物联网\jucheap-JuCheap.2.0-master\jucheap-JuCheap.2.0-master\JuCheap.2.0\JuCheap.Entity\obj\Debug\JuCheap.Entity.pdb

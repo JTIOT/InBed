@@ -1,0 +1,111 @@
+p{color:#fff;}
+.detail-con{
+    
+    margin: 20px 30px;
+    overflow: hidden;
+    border-bottom: 2px solid #fff;
+}
+
+.detail-info{
+    width: 50%;
+    float: left;
+
+}
+.detail-info .elder-img{
+    float: left;
+    width: 25%;
+    margin-top:10px;
+}
+.detail-info .elder-img img{
+    width: 100%;
+    min-width: 90px;
+}
+.detail-info .elder-txt{
+    float: left;
+    width: 70%;
+    margin-left: 30px;
+}
+.detail-info .elder-txt p{
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+.detail-info .elder-txt:last-child{
+    width:50%;
+}
+
+.detail-data{
+    width:50%;
+    float: left;
+}
+.data-txt{
+    width:60%;
+    float: left;
+    height: 50px;
+    text-align: center;
+}
+.data-img{
+    width:20%;
+    float: left;
+    height: 50px;
+    line-height: 50px
+
+}
+.detail-data .data-left{
+    width:45%;
+    float: left;
+    border-right: 1px solid #fff;
+}
+.detail-data p{
+    margin:0;
+    font-size: 1.6rem
+}
+
+.data-left>div,.data-right>div{
+    width:200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.detail-data .data-right{
+    width:50%;
+    float: right;
+}
+.data-bottom{
+    margin:30px 0;
+}
+.data-bottom-box{
+    width:90%;
+    margin:0 auto;
+}
+.data-bottom-box>div{
+    display: inline-block;
+    width:32%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.tab-content{
+    position: relative;
+    border:1px solid #fff;
+    border-top:none;
+    margin: 0 30px;
+}
+.input-box{
+    position: absolute;
+    top:0;
+    right:50px;
+}
+.input-box p{
+    font-size: 16px;
+}
+.input-box input{
+    width: 40px;
+    color:#000;
+    text-align: center;
+    margin-left:2px;
+}
+
+.nav-tabs>li>a{
+    border-radius:0 !important;
+    color:#fff;
+    border:1px solid #fff !important;
+}
