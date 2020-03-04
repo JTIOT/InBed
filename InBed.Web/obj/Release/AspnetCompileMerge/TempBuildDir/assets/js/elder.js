@@ -17,7 +17,7 @@ $(function () {
         var scrollTop = $(this).scrollTop();
         var scrollHeight = $(document).height();
         var windowHeight = $(this).height();
-        if (scrollTop + windowHeight == scrollHeight) {
+        if (Math.round(scrollTop + windowHeight) >= scrollHeight) {
             if (isScroll) {
                 isScroll = false;
                 $('.loaddiv').show();
@@ -41,6 +41,7 @@ $(function () {
             url:s_url,
             dataType: "json",
             success: function (result) {
+                $('.loaddiv').hide();
                 if (flag == 1){
                     for (var i = 0; i < result.data.length; i++) {
                         var count = 0;
@@ -189,6 +190,10 @@ $(function () {
                     }
                 }
             },
+            error: function (error) {
+                $('.loaddiv').hide();
+                console.log('error');
+            }
         })
     }
     insertElder(0, url_left + nextPage + url_Length + Length + url_right, true,0);

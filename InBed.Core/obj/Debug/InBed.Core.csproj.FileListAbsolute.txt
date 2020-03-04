@@ -101,3 +101,4 @@ C:\Users\tomne\Desktop\InBedProject\InBed\InBed.Core\bin\Debug\Memcached.ClientL
 C:\Users\tomne\Desktop\InBedProject\InBed\InBed.Core\obj\Debug\InBed.Core.csproj.CopyComplete
 C:\Users\tomne\Desktop\InBedProject\InBed\InBed.Core\obj\Debug\InBed.Core.dll
 C:\Users\tomne\Desktop\InBedProject\InBed\InBed.Core\obj\Debug\InBed.Core.pdb
+C:\Users\tomne\Desktop\InBedProject\InBed\InBed.Core\obj\Debug\InBed.Core.csprojAssemblyReference.cache

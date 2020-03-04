@@ -122,6 +122,11 @@ namespace InBed.Data
             if (context == null) context = Db.GetInstance().SqlRContext();
             return context.Query<T>(query, dy, transaction).ToList();
         }
+        public List<T> BalList(string query, DynamicParameters dy, SqlConnection context = null, IDbTransaction transaction = null)
+        {
+            if (context == null) context = Db.GetInstance().BalSqlRContext();
+            return context.Query<T>(query, dy, transaction).ToList();
+        }
 
         public List<T> List(string column, string tableName, string where = null, DynamicParameters dy = null, SqlConnection context = null, IDbTransaction transaction = null)
         {

@@ -16,8 +16,11 @@ namespace InBed.Data.DAL
         //private string tableName = "OPENQUERY([AP-SERVER], 'SELECT * FROM BAL.dbo.CustomerDailySchedule WHERE ";
         //private string strWhere = "";
 
+        /*private string sqlQuery =
+            "SELECT TOP 1 * FROM OPENQUERY([AP-SERVER], 'SELECT * FROM BAL.dbo.CustomerDailySchedule WHERE";*/
+
         private string sqlQuery =
-            "SELECT TOP 1 * FROM OPENQUERY([AP-SERVER], 'SELECT * FROM BAL.dbo.CustomerDailySchedule WHERE";
+            "SELECT TOP 1 FROM BAL.dbo.CustomerDailySchedule WHERE";
 
         private string sqlOrderBy = " order by currDate desc";
         #endregion
@@ -25,13 +28,22 @@ namespace InBed.Data.DAL
         public List<DailyAnalysisEntity> GetWithPages(string customerId, string s_date, string e_date)
         {
 
-            sqlQuery += " customerId = ''" + customerId + "''";
-            sqlQuery += " and currDate >= ''" + s_date + "''";
-            sqlQuery += " and currDate <= ''" + e_date + "'' ')";
+            try
+            {
+                sqlQuery += " customerId = ''" + customerId + "''";
+                sqlQuery += " and currDate >= ''" + s_date + "''";
+                sqlQuery += " and currDate <= ''" + e_date + "'' ')";
 
-            var dy = new DynamicParameters();
-            sqlQuery = sqlQuery + sqlOrderBy;
-            return DbHelper<DailyAnalysisEntity>.GetInstance().List(sqlQuery, dy);
+                var dy = new DynamicParameters();
+                sqlQuery = sqlQuery + sqlOrderBy;
+                var result = DbHelper<DailyAnalysisEntity>.GetInstance().BalList(sqlQuery, dy);
+                return result;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("error getWithPage");
+            }
+            return null;
 
             //if (customerId != null)
             //{
@@ -64,5 +76,21 @@ namespace InBed.Data.DAL
 
         }
 
+        public DailyAnalysisEntity GetData(string customerId)
+        {
+            var ret = new DailyAnalysisEntity();
+            Random r = new Random();
+
+            ret.sleepingTime = r.Next(0, 4000).ToString();
+            ret.nightTimeAwakenings = r.Next(0, 30).ToString();
+            ret.deepSleepTime = r.Next(0, 9000).ToString();
+            ret.avgBR = r.Next(10, 30).ToString();
+            ret.avgHB = r.Next(60, 80).ToString();
+            ret.gotoBedTime = "20200309225049000";
+            ret.getupTime = "20200310082228000";
+            ret.sleepLatency = r.Next(9, 99).ToString();
+
+            return ret;
+        }
     }
 }

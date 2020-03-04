@@ -480,7 +480,10 @@ namespace InBed.Service.Abstracts
                     //}
 
                     //get daily analysis entity (Refer to DailyAnalysisEntity)
-                    var dailyAnalysisEntity = new DailyAnalysisDAL().GetWithPages(customerID, DateTime.Now.AddDays(-1).ToString("yyyyMMdd"), DateTime.Now.ToString("yyyyMMdd"));
+                    //var dailyAnalysisEntity = new DailyAnalysisDAL().GetWithPages(customerID, DateTime.Now.AddDays(-1).ToString("yyyyMMdd"), DateTime.Now.ToString("yyyyMMdd"));
+
+                    var dailyAnalysisEntity = new List<DailyAnalysisEntity>();
+                    dailyAnalysisEntity.Add(new DailyAnalysisDAL().GetData(customerID));
 
                     if (dailyAnalysisEntity.Count > 0)
                     {
