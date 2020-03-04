@@ -102,7 +102,7 @@ function updateQueryResult() {
                     html += "</div>";
                     elderList.push(result.data[i]);
                 }
-                $(".elder-container").append(html);
+                $(".elder-container").html(html);
                 //$(".elder-container").css('minHeight', mheight);
             }
         }

@@ -836,6 +836,13 @@ namespace InBed.Service.Abstracts
                         {
                             ElderInfo.Online = 1;
                         }
+                        else if(ElderInfo.HD > 0)
+                        {
+                            if(ElderInfo.Inbed == 0)
+                            {
+                                ElderInfo.HD = 0;
+                            }
+                        }
 
                         ///告警设置
                         var setElderEntity = new ElderAlarmSetupDAL().Query(item.id);
@@ -904,6 +911,19 @@ namespace InBed.Service.Abstracts
                         ElderInfo.HD = item.avHR;
                         ElderInfo.Online = item.IsOnline;
                         ElderInfo.Inbed = item.IsBed;
+
+                        if (ElderInfo.HD <= 0)
+                        {
+                            ElderInfo.Online = 1;
+                        }
+                        else if (ElderInfo.HD > 0)
+                        {
+                            if (ElderInfo.Inbed == 0)
+                            {
+                                ElderInfo.HD = 0;
+                            }
+                        }
+
                         dataList.Add(ElderInfo);
                     }
                     res.data = dataList;
