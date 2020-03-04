@@ -229,9 +229,10 @@ var provinceName;
 //创建和初始化地图函数：
 function initMap() {
     createMap();//创建地图
-    setMapStyle()//设置地图样式
+    //setMapStyle()//设置地图样式
+    //styleMap();
     setMapEvent();//设置地图事件
-    drawPoint();
+    //drawPoint();
     /*setMapClick();*/
     elderMarks();
     //setMapScroll()
@@ -242,8 +243,8 @@ function initMap() {
 }
 
 function createMap() {
-    map = new BMap.Map("map", { minZoom: 5, maxZoom: 16, enableMapClick: false });          // 创建地图实例  
-    map.centerAndZoom(new BMap.Point(121.105, 23.692), 9);     // 初始化地图，设置中心点坐标和地图级别
+    map = new BMap.Map("map", { minZoom: 5, maxZoom: 16, enableMapClick: true });          // 创建地图实例  
+    map.centerAndZoom(new BMap.Point(121.105, 23.692), 8);     // 初始化地图，设置中心点坐标和地图级别
     //map.centerAndZoom("台湾省", 15);
 }
 
@@ -285,6 +286,17 @@ SquareOverlay.prototype.draw = function () {
     this._div.style.top = position.y - this._length / 2 + "px";
 }
 
+SquareOverlay.prototype.toggle = function () {
+    if (this._div) {
+        if (this._div.style.display == "") {
+            this.hide();
+        }
+        else {
+            this.show();
+        }
+    }
+}
+
 function elderMarks() {
     var elderArrData = (function () {
         var data;
@@ -302,16 +314,35 @@ function elderMarks() {
     console.log('elder data', elderArrData);
     for (let i = 0; i < elderArrData.length; i++) {
         const elderData = elderArrData[i]
+
+        if (!elderData.MapPoint) continue;
+
+        const elderID = elderData.Id;
+        const age = elderData.Age;
+        const name = elderData.name;
+        const phone = elderData.homephone;
+        const address = elderData.homeaddress;
+
+        const sContent =
+            "<div style='width:350px'>" +
+            "<h4 style='margin:0 0 5px 0;padding:0.2em 0;cursor:pointer;display:inline-block ' onclick='goDetail(" + elderID + ")'>老人信息</h4>" +
+            "<span style='font-size:20px;margin-left:10px'><i class='fa fa-long-arrow-left'></i></span>" +
+            "</div>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:1em'>姓名：" + name + "</p>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:1em'>年齡：" + age + "</p>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:1em'>電話：" + phone + "</p>" +
+            "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:1em'>住址：" + address + "</p>" +
+            "</div>";
         const mapPoint = elderData.MapPoint.split(",");
         const point = new BMap.Point(mapPoint[0], mapPoint[1]);
-        map.centerAndZoom(point, 1);
-        //var marker = new BMap.Marker(point);  // 创建标注
-        var mySquare = new SquareOverlay(point, 6, "green");
+        //map.centerAndZoom(point, 1);
+        var mySquare = new BMap.Marker(point);  // 创建标注
+        //var mySquare = new SquareOverlay(point, 6, "green");
         map.addOverlay(mySquare);// 将标注添加到地图中
-        /*        var infoWindow = new BMap.InfoWindow("<div></div>");  // 创建信息窗口对象
-                marker.openInfoWindow(infoWindow);*/
-        /*marker.addEventListener("click", function () {
-        });*/
+        //var infoWindow = new BMap.InfoWindow(sContent);
+        mySquare.addEventListener("click", function () {
+            this.openInfoWindow(new BMap.InfoWindow(sContent));
+        });
     }
 }
 
@@ -361,6 +392,10 @@ function createMap123() {
 
 }
 
+function styleMap() {
+    map.setMapStyle({ style: 'midnight' });
+}
+
 function setMapStyle() {
     map.setMapStyle({
         'styleJson': [
@@ -393,7 +428,7 @@ function setMapStyle() {
                 'featureType': 'arterial',
                 'elementType': 'geometry.fill',
                 'stylers': {
-                    'color': '#000000'
+                    'color': '#a3a39d'
                 }
             }, {
                 'featureType': 'arterial',
@@ -429,7 +464,8 @@ function setMapStyle() {
                 'featureType': 'building',
                 'elementType': 'geometry.fill',
                 'stylers': {
-                    'color': '#000000'
+                    'color': '#d1d1c7',
+                    'visibility': 'on'
                 }
             }, {
                 'featureType': 'all',

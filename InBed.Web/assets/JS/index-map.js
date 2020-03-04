@@ -230,6 +230,7 @@ var provinceName;
 function initMap() {
     createMap();//创建地图
     //setMapStyle()//设置地图样式
+    //styleMap();
     setMapEvent();//设置地图事件
     //drawPoint();
     /*setMapClick();*/
@@ -389,6 +390,10 @@ function createMap123() {
     });
 
 
+}
+
+function styleMap() {
+    map.setMapStyle({ style: 'midnight' });
 }
 
 function setMapStyle() {
